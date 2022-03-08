@@ -13,7 +13,7 @@
 
                 <div style="font-size: 12px;font-family: Selawik;font-weight: 400;color: #808080;padding-left: 33px;padding-top: 25px;">TVL</div>
 
-                <div style="font-size: 18px;font-family: Selawik;font-weight: 600;color: #FFFFFF;padding-left: 33px;padding-top:8px;">$321,720,913,496</div>
+                <div style="font-size: 18px;font-family: Selawik;font-weight: 600;color: #FFFFFF;padding-left: 33px;padding-top:8px;">${{TVL}}</div>
 
 
               <!---2-->
@@ -25,11 +25,11 @@
             <div style="width: 420px; height: 303px;background: #242424;border-radius: 10px;margin-left: 20px;">
               <div style="font-size: 12px;font-family: Selawik;font-weight: 400;color: #808080;padding-left: 33px;padding-top: 25px;">My PowerRate</div>
 
-              <div style="font-size: 18px;font-family: Selawik;font-weight: 600;color: #FFFFFF;padding-left: 33px;padding-top: 8px;">--</div>
+              <div style="font-size: 18px;font-family: Selawik;font-weight: 600;color: #FFFFFF;padding-left: 33px;padding-top: 8px;">{{myPowerRate}} s{{OHMSymbol}}/s</div>
 
               <div style="font-size: 12px;font-family: Selawik;font-weight: 400;color: #808080;padding-left: 33px;padding-top: 12px;">Available/Total</div>
 
-              <div style="font-size: 18px;font-family: Selawik;font-weight: 600;color: #FFFFFF;padding-left: 33px;padding-top: 8px;">--</div>
+              <div style="font-size: 18px;font-family: Selawik;font-weight: 600;color: #FFFFFF;padding-left: 33px;padding-top: 8px;">{{myClaimableReward}} s{{OHMSymbol}}/ {{myTotalReward}} s{{OHMSymbol}}</div>
 
               <div style="display: flex;margin-left: 33px;margin-top: 12px;">
                 <div style=" width: 11px;height: 11px; background: #0792E3;"></div>
@@ -56,12 +56,12 @@
           <div style="width: 1080px;height: 80px; background: #242424; border-radius: 10px;margin-top: 20px; display: flex;">
             <div style="width: 290px;height: 50px;border: 1px solid #0792E3;border-radius: 10px;margin-left: 30px;margin-top: 14px;">
               <div style="font-size: 12px;font-family: Selawik;font-weight: 400;color: #808080;padding-top: 6px;padding-left: 21px;">Market Cap</div>
-              <div style="font-size: 20px;font-family: Selawik;font-weight: 600; color: #FFFFFF;padding-left: 21px; ">{{marketCap}}</div>
+              <div style="font-size: 20px;font-family: Selawik;font-weight: 600; color: #FFFFFF;padding-left: 21px; ">${{marketCap}}</div>
             </div>
 
             <div style="width: 290px;height: 50px;border: 1px solid #0792E3;border-radius: 10px;margin-left: 30px;margin-top: 14px;">
-              <div style="font-size: 12px;font-family: Selawik;font-weight: 400;color: #808080;padding-top: 6px;padding-left: 21px;">Back per SAT</div>
-              <div style="font-size: 20px;font-family: Selawik;font-weight: 600; color: #FFFFFF;padding-left: 21px; ">{{backingPerOHM}}</div>
+              <div style="font-size: 12px;font-family: Selawik;font-weight: 400;color: #808080;padding-top: 6px;padding-left: 21px;">Back per {{OHMSymbol}}</div>
+              <div style="font-size: 20px;font-family: Selawik;font-weight: 600; color: #FFFFFF;padding-left: 21px; ">${{backingPerOHM}}</div>
             </div>
 
             <div style="width: 290px;height: 50px;border: 1px solid #0792E3;border-radius: 10px;margin-left: 30px;margin-top: 14px;">
@@ -76,45 +76,45 @@
             <div style="width: 530px;height: 303px;background: #242424;border-radius: 10px;">
               <div style="font-size: 12px;font-family: Selawik;font-weight: 400;color: #808080;padding-left: 33px;padding-top: 25px;">APY (%)</div>
 
-              <div style="font-size: 18px;font-family: Selawik;font-weight: 600;color: #FFFFFF;padding-left: 30px;padding-top: 10px;">{{apy}}</div>
+              <div style="font-size: 18px;font-family: Selawik;font-weight: 600;color: #FFFFFF;padding-left: 30px;padding-top: 10px;">{{APY}}%</div>
 
               <div style="font-size: 12px;font-family: Selawik;font-weight: 400;color: #808080;padding-left: 33px;padding-top: 15px;">Total Value Deposited</div>
 
-              <div style="font-size: 18px;font-family: Selawik;font-weight: 600;color: #FFFFFF;padding-left: 33px;padding-top: 10px;">{{OHMStakedTVL}}</div>
+              <div style="font-size: 18px;font-family: Selawik;font-weight: 600;color: #FFFFFF;padding-left: 33px;padding-top: 10px;">${{TVL}}</div>
 
               <div style="font-size: 12px;font-family: Selawik;font-weight: 400;color: #808080;padding-left: 33px;padding-top: 15px;">Current Index</div>
 
-              <div style="font-size: 18px;font-family: Selawik;font-weight: 600;color: #FFFFFF;padding-left: 33px;padding-top: 10px;">{{currentIndex}}</div>
+              <div style="font-size: 18px;font-family: Selawik;font-weight: 600;color: #FFFFFF;padding-left: 33px;padding-top: 10px;">{{currentIndex}} s{{OHMSymbol}}</div>
 
-              <div class="pc-dashboard-btn">Start Stake</div>
+              <div class="pc-dashboard-btn" @click="route('/stake')">Start Stake</div>
 
 
             </div>
             <div style="width: 530px; height: 303px;background: #242424;border-radius: 10px;margin-left: 20px;">
               <div style="font-size: 12px;font-family: Selawik;font-weight: 400;color: #808080;padding-left: 33px;padding-top: 25px;">Treasury Balance</div>
 
-              <div style="font-size: 18px;font-family: Selawik;font-weight: 600;color: #FFFFFF;padding-left: 33px;padding-top: 10px;">{{marketValueOfTreasuryAssets}}</div>
+              <div style="font-size: 18px;font-family: Selawik;font-weight: 600;color: #FFFFFF;padding-left: 33px;padding-top: 10px;">${{marketValueOfTreasuryAssets}}</div>
 
-              <div style="font-size: 12px;font-family: Selawik;font-weight: 400;color: #808080;padding-left: 33px;padding-top: 15px;">SAT Price</div>
+              <div style="font-size: 12px;font-family: Selawik;font-weight: 400;color: #808080;padding-left: 33px;padding-top: 15px;">{{OHMSymbol}} Price</div>
 
-              <div style="font-size: 18px;font-family: Selawik;font-weight: 600;color: #FFFFFF;padding-left: 33px;padding-top: 10px;">{{OHMPrice}}</div>
+              <div style="font-size: 18px;font-family: Selawik;font-weight: 600;color: #FFFFFF;padding-left: 33px;padding-top: 10px;">${{OHMPrice}}</div>
 
               <div style="display: flex;padding-top: 20px;padding-left: 33px;">
                 <div style="width: 170px;height: 40px;border: 1px solid #0792E3;border-radius: 10px;position: relative;">
                   <img :src="icon_matic_sat_lp"  style="width: 45px;height: 30px;position: absolute;top:4px ;left: 10px;"    />
-                  <div style="font-size: 12px;font-family: Selawik;font-weight: 400;color: #FFFFFF;position: absolute;left: 72px;top: 5px;">--</div>
+                  <div style="font-size: 12px;font-family: Selawik;font-weight: 400;color: #FFFFFF;position: absolute;left: 72px;top: 5px;">${{OHMDAILPBalance}}</div>
 
-                  <div style="cursor: pointer;font-size: 10px;font-family: Selawik; font-weight: 400;text-decoration: underline;color: #808080;position: absolute;left: 72px;bottom: 5px;">View contract</div>
+                  <div style="cursor: pointer;font-size: 10px;font-family: Selawik; font-weight: 400;text-decoration: underline;color: #808080;position: absolute;left: 72px;bottom: 5px;" @click="viewContract(sAsset.contract.OHM_DAI_LP)">View contract</div>
                 </div>
                 <div style="width: 170px;height: 40px;border: 1px solid #0792E3;border-radius: 10px;position: relative;margin-left: 15px;">
                   <img :src="icon_sat"  style="width: 30px;height: 30px;position: absolute;top:4px ;left: 10px;"   />
-                  <div style="font-size: 12px;font-family: Selawik;font-weight: 400;color: #FFFFFF;position: absolute;left: 60px;top: 5px;">--</div>
+                  <div style="font-size: 12px;font-family: Selawik;font-weight: 400;color: #FFFFFF;position: absolute;left: 60px;top: 5px;">${{DAIBalance}}</div>
 
-                  <div style="cursor: pointer;font-size: 10px;font-family: Selawik; font-weight: 400;text-decoration: underline;color: #808080;position: absolute;left:60px;bottom: 5px;">View contract</div>
+                  <div style="cursor: pointer;font-size: 10px;font-family: Selawik; font-weight: 400;text-decoration: underline;color: #808080;position: absolute;left:60px;bottom: 5px;" @click="viewContract(sAsset.contract.DAI)">View contract</div>
                 </div>
 
               </div>
-              <div class="pc-dashboard-end-btn">Start Bond</div>
+              <div class="pc-dashboard-end-btn" @click="route('/bond')">Start Bond</div>
 
             </div>
 
@@ -198,35 +198,35 @@
     <div style="padding-top: 1.8rem;padding-left: 0.9rem;  font-size: 0.48rem; font-family: Selawik;font-weight: 600; color: #808080;">Dashboard</div>
 
     <div class="h5-div-item" style="margin-top: 0.8rem;">
-      <div class="h5-div-item-up" >MTD Price</div>
-      <div class="h5-div-item-down" >$1,720,913.67</div>
+      <div class="h5-div-item-up" >{{OHMSymbol}} Price</div>
+      <div class="h5-div-item-down" >${{OHMPrice}}</div>
     </div>
 
       <div class="h5-div-item" >
         <div class="h5-div-item-up" >TVL</div>
-        <div class="h5-div-item-down" >$1,720,913.67</div>
+        <div class="h5-div-item-down" >${{TVL}}</div>
       </div>
 
       <div class="h5-div-item" >
         <div class="h5-div-item-up" >APY</div>
-        <div class="h5-div-item-down" >73,828.30%</div>
+        <div class="h5-div-item-down" >{{APY}}%</div>
       </div>
 
       <div class="h5-div-item" >
         <div class="h5-div-item-up" >Treasury Balance</div>
-        <div class="h5-div-item-down" >$4,771,525,254.43</div>
+        <div class="h5-div-item-down" >${{marketValueOfTreasuryAssets}}</div>
       </div>
       <div class="h5-div-item" >
         <div class="h5-div-item-up" >Market Cap</div>
-        <div class="h5-div-item-down" >$2,477,593,041.56</div>
+        <div class="h5-div-item-down" >${{marketCap}}</div>
       </div>
       <div class="h5-div-item" >
         <div class="h5-div-item-up" >Current Index</div>
-        <div class="h5-div-item-down" >5.15 MTD</div>
+        <div class="h5-div-item-down" >{{currentIndex}} s{{OHMSymbol}}</div>
       </div>
       <div class="h5-div-item" >
-        <div class="h5-div-item-up" >Back Per MTD</div>
-        <div class="h5-div-item-down" >$264.99</div>
+        <div class="h5-div-item-up" >Back Per {{OHMSymbol}}</div>
+        <div class="h5-div-item-down" >${{backingPerOHM}}</div>
       </div>
       <div class="h5-div-item" >
         <div class="h5-div-item-up" >Runaway</div>
@@ -253,6 +253,7 @@ import {
 
 
 } from "../../utils/Wallet";
+import * as publicJs from "@/utils/public";
 export default {
   name: "Index",
   components: {
@@ -273,39 +274,74 @@ export default {
       isMobile: state => state.sys.isMobile,
       sAsset: state => state.sAsset,
     }),
-    inviteLink() {
-      return "https://" + window.location.host + "?ref=" + this.myAddress;
-    },
-    myAddress() {
-     return 1;
-      //return getAddress();
+    OHMSymbol() {
+      return this.sAsset.OHMSymbol;
     },
     OHMPrice() {
-     return 2;
+      return publicJs.toBigNumber(this.sAsset.USDFragmentsPerOHM).dividedBy(10**this.sAsset.USDDecimals).toFixed(this.sAsset.USDDecimals);
+    },
+    DAIBalance() {
+      return publicJs.toBigNumber(this.sAsset.DAIBalanceOfUser).dividedBy(10**this.sAsset.DAIDecimals);
+    },
+    OHMDAILPBalance() {
+      return publicJs.toBigNumber(this.sAsset.OHMDAILPBalanceOfUser).dividedBy(10**this.sAsset.OHMDAILPDecimals);
     },
     backingPerOHM() {
-     return 3;
+      const OHMCirculatingSupply = this.sAsset.OHMTotalSupply - this.sAsset.OHMBalanceOfDAO;
+     return (this.marketValueOfTreasuryAssets / (OHMCirculatingSupply / 10**this.sAsset.OHMDecimals)).toFixed(this.sAsset.OHMDecimals);
     },
     currentIndex() {
-     return this.sAsset.currentIndex;
+     return this.sAsset.currentIndex / 10**this.sAsset.OHMDecimals;
     },
     marketValueOfTreasuryAssets() {
-     return 5;
+      const t1 = this.sAsset.OHMBalanceOfOHMDAILP * this.sAsset.DAIBalanceOfTreasury / this.sAsset.DAIBalanceOfOHMDAILP;
+      const t2 = this.sAsset.OHMDAILPBalanceOfTreasury * this.sAsset.OHMBalanceOfOHMDAILP * 2 / this.sAsset.OHMDAILPTotalSupply;
+      const temp  = ((t1 + t2) / 10**this.sAsset.OHMDecimals * this.OHMPrice).toFixed(2)
+      return temp;
     },
     circulatingSupply() {
      return 6;
     },
     marketCap() {
-     return 7;
+     return (this.sAsset.OHMTotalSupply / 10**this.sAsset.OHMDecimals * this.OHMPrice).toFixed(2);
     },
-    apy() {
-     return 8;
+    APY() {
+      if (this.sAsset.stakingContractBalance <= 0) {
+        return 0;
+      }
+      const roi  = (this.sAsset.epochDistribute * 15 / this.sAsset.stakingContractBalance);
+     return ((1 + roi) ** (365 / 5 - 1)).toFixed(2);
     },
     OHMStakedRatio() {
-     return 9;
+     return (this.sAsset.OHMBalanceOfStaking / this.sAsset.OHMTotalSupply);
     },
-    OHMStakedTVL() {
-     return 10;
+    TVL() {
+     return (this.sAsset.OHMBalanceOfStaking / 10**this.sAsset.OHMDecimals * this.OHMPrice).toFixed(2);
+    },
+    // Consensus Pool
+    nextRewardAmount() {
+      if (this.sAsset.sOhmCirculatingSupply <= 0) {
+        return 0;
+      }
+      const sOHMBalance = publicJs.toBigNumber(this.sAsset.sOHMBalanceOfUser).div(10**this.sAsset.sOHMDecimals);
+      return publicJs.toBigNumber(this.sAsset.epochDistribute).times(sOHMBalance).div(this.sAsset.sOhmCirculatingSupply).toFixed(this.sAsset.sOHMDecimals);
+    },
+    networkPower() {
+      return this.sAsset.ConsensusPoolTotalPower;
+    },
+    myClaimableReward() {
+      return publicJs.toBigNumber(this.sAsset.ConsensusPoolGetInfoOfUserClaimableAmount).toFixed(this.sAsset.sOHMDecimals);
+    },
+    myTotalReward() {
+      return publicJs.toBigNumber(this.sAsset.ConsensusPoolGetInfoOfUserTotalReward).toFixed(this.sAsset.sOHMDecimals);
+    },
+    myPowerRate() {
+      if (this.networkPower <= 0) {
+        return 0;
+      }
+      const myPower = this.sAsset.ConsensusPoolGetInfoOfUserPower;
+      const nextConsensusReward = publicJs.toBigNumber(this.nextRewardAmount).times(0.1).times(myPower).div(this.networkPower);
+      return nextConsensusReward.div(8*60*60).toFixed(8)
     },
   },
   created() {
@@ -324,6 +360,12 @@ export default {
   },
 
   methods: {
+    viewContract(address) {
+      window.open(this.configData.blockExplorerUrls + 'address/' + address)
+    },
+    route(path) {
+      this.$router.push(path).catch(err => {err});
+    },
     initCharts() {
       let charts = this.$echarts.init(document.getElementById('canvas'));
       var option = {
